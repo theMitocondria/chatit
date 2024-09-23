@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import LeftMsg from "../components/leftMsg";
 import RightMsg from "../components/rightMsg";
 import { MultiStepLoaderDemo } from "../components/LoaderApp";
-// import  from "socket.io-client";
+import { useNavigate } from "react-router-dom";
+
 import bg from "../context/Chat.png";
 
 
@@ -12,6 +13,7 @@ const Chat = () => {
     const [user2,setuser2] = useState("");
     const [messages, setMessages] = useState([]);
     const [conn, setConn] = useState(null)
+    const navigate = useNavigate();
 
     const handleSend = async (e) => {
         e.preventDefault();
@@ -42,6 +44,9 @@ const Chat = () => {
     }
     useEffect(() => {
         // Add the 'dark' class to the html element by default
+        if(!username){
+            navigate("/");
+        }
         document.documentElement.classList.add('dark');
     }, []);
       
