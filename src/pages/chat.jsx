@@ -84,7 +84,7 @@ const Chat = () => {
 
     useEffect(() => {
         if (conn == null) {
-            setConn(new WebSocket("ws://localhost:8080/ws"));
+            setConn(new WebSocket("ws://crowrandchat.onrender.com/ws"));
         }else{
             conn.addEventListener("message", (e) => {
                 console.log(e);
