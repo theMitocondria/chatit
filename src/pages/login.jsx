@@ -24,7 +24,7 @@ const Login = () => {
             <div className=" md:ml-[30%]  md:border md:w-[45%] md:rounded-lg md:p-4 md:border-[#ffffff] mx-2 my-auto p-6 ">
                 <p className=" text-3xl text-[#ffffff] opacity-75">Connect</p>
                 <h1 className="text-6xl font-extralight text-[#ffffff] mb-4 ">Randomly</h1>
-                <form className="flex flex-col  overflow-auto" style={{
+                <form className="flex flex-col " style={{
                     maxHeight: "calc(100vh - 7.5rem)"
                 }}
                 onSubmit={handleLogin}
